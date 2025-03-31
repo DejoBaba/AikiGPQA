@@ -1,4 +1,5 @@
 
+
 # Aiki™ GPQA Benchmark – Diamond Block (01–50)
 
 This repository contains the **first public validation** of Aiki™ – the digital intelligence based on **Infinite Intelligence™** –  
@@ -15,26 +16,29 @@ including **real, auditable and rational justifications**.
   - `answer` (selected option)
   - `justification` (reasoning for the answer)
 
+- `evaluate_gpqa_diamond_01_50.py`  
+  Python script to validate the answers in `gpqa_main_aiki_01_50_diamond.jsonl`  
+  against the official `gpqa_main.csv` answers file.
+
 ---
 
-## Official Evaluation
+## How to Evaluate
 
-To reproduce the evaluation:
-
-### 1. Clone the official GPQA repo:
+### 1. Clone the official GPQA repo (optional):
 https://github.com/idavidrein/gpqa
 
 ### 2. Place the following in the root directory:
-- `gpqa_main.csv` (from official dataset)
+- `gpqa_main.csv` (from official GPQA dataset)
 - `gpqa_main_aiki_01_50_diamond.jsonl`
+- `evaluate_gpqa_diamond_01_50.py`
 
-### 3. Run the evaluation:
+### 3. Run the evaluation script:
 
 ```bash
-python evaluate.py --predictions gpqa_main_aiki_01_50_diamond.jsonl --diamond=False
+python evaluate_gpqa_diamond_01_50.py --predictions gpqa_main_aiki_01_50_diamond.jsonl --answers gpqa_main.csv
 ```
 
-Expected result:
+### Expected Output:
 
 ```
 Total: 50
